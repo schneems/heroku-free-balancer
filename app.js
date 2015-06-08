@@ -31,11 +31,9 @@ app.use(express.static(path.join(__dirname, 'public'))); // jshint ignore: line
 // catch 404 and forward to error handler
 app.use(function(req, res) {
     var date = new Date();
-    if (date.getHours() >= 6) { // from 6am to 12pm redirect to first worker
-        console.log('Redirect to: "' + SERVER_1 + '"');
+    if (date.getHours() >= 12) {
         res.redirect(302, SERVER_1 + req.url);
-    } else { // from 12am to 5:59am redirect to secondary worker
-        console.log('Redirect to: "' + SERVER_2 + '"');
+    } else {
         res.redirect(302, SERVER_2 + req.url);
     }
 });
