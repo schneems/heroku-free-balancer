@@ -30,11 +30,24 @@ app.use(express.static(path.join(__dirname, 'public'))); // jshint ignore: line
 
 // catch 404 and forward to error handler
 app.use(function(req, res) {
+
+	var route = req.url.slice(1);
+	if (route.length === 0) {
+		return res.sendStatus(401);
+	}
+	var pos = route.indexOf('/');
+	var key = route.substr(0, (pos === -1) ? route.length : pos);
+
+	if (!config.hasOwnProperty(key)) {
+		return res.sendStatus(402);
+	}
+
+	var appConfig = config[key];
 	var date = new Date();
 	if (date.getHours() >= 12) {
-		res.redirect(302, config.server1 + req.url);
+		res.redirect(302, appConfig[0]);
 	} else {
-		res.redirect(302, config.server2 + req.url);
+		res.redirect(302, appConfig[1]);
 	}
 });
 

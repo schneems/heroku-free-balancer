@@ -1,4 +1,10 @@
 {
-	"server1": "http://a-i-t-1.herokuapp.com",
-	"server2": "http://a-i-t-2.herokuapp.com"
+	"app1": [
+		"http://a-i-t-1.herokuapp.com",
+		"http://a-i-t-2.herokuapp.com"
+	],
+	"app2": [
+		"http://www.google.com",
+		"http://www.apple.com"
+	]
 }
