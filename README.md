@@ -1,6 +1,6 @@
 # Heroku Free Balancer
 
-Since July 2015 Heroku will introduce their new pricing system which forces free apps to sleep min. six hours a day.
+From July 2015 on, Heroku will introduce their new pricing system which forces free apps to sleep at least six hours a day.
 
 With this project you can easily surpass this restriction by using only one paid heroku app for all of your free heroku projects:
 - Just use one paid dyno that is always up to act as a load balancer. Now you can add as many apps that will be always up, because the same code runs on two identical heroku apps.
