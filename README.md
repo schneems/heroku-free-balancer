@@ -40,7 +40,7 @@ Once you have followed the installation steps, you are ready to go!
 
 ## Notes
 
-- This project needs to run on min. 7$ (or traditional) dyno. Hence it should never sleep.
+- This project needs to run on min. 7$ (or traditional) dyno. Hence it must never sleep to be working fully.
 - You can add as many apps as you want, but only two child servers are supported right now.
 - This project may violate the TOS of Heroku, hence use at your own risk!
 
