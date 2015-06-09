@@ -42,12 +42,13 @@ app.use(function(req, res) {
 		return res.sendStatus(402);
 	}
 
+	var appRoute = req.url.slice(1 + key.length);
 	var appConfig = config[key];
 	var date = new Date();
 	if (date.getHours() >= 12) {
-		res.redirect(302, appConfig[0]);
+		res.redirect(302, appConfig[0] + appRoute);
 	} else {
-		res.redirect(302, appConfig[1]);
+		res.redirect(302, appConfig[1] + appRoute);
 	}
 });
 
