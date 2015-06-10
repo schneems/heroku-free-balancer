@@ -6,6 +6,8 @@ With this project you can easily surpass this restriction by using only one paid
 - Just use one paid dyno that is always up to act as a load balancer. Now you can add as many apps that will be always up, because the same code runs on two identical heroku apps.
 - Heroku Free Balancer will forward requests in the morning to your first heroku app and in the afternoon to your second heroku app.
 
+Note: Running this software is against [Heroku's terms of service](https://www.heroku.com/policy/tos#no_fee_dodging), use at your own risk.
+
 ## Installation
 
 1. Create two free heroku apps and install your application on it.
@@ -42,7 +44,6 @@ Once you have followed the installation steps, you are ready to go!
 
 - This project needs to run on min. 7$ (or traditional) dyno. Hence it must never sleep to be working fully.
 - You can add as many apps as you want, but only two child servers are supported right now.
-- This project may violate the TOS of Heroku, hence use at your own risk!
 
 ## Contributing
 
